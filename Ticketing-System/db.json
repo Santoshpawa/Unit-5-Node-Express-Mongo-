@@ -1,0 +1,12 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Login Bug",
+      "description": "Cannot login with valid credentials",
+      "priority": "high",
+      "user": "admin",
+      "status": "pending"
+    }
+  ]
+}
