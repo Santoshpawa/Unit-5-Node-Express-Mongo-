@@ -1,0 +1,23 @@
+// 1. Retrieve all orders with the order_status "shipped"
+db.orders.find({ order_status: "shipped" });
+
+// 2. Update the total_amount of the order with order_id: 1 to 70000
+db.orders.updateOne(
+  { order_id: 1 },
+  { $set: { total_amount: 70000 } }
+);
+
+// 3. Delete the order with order_id: 4
+db.orders.deleteOne({ order_id: 4 });
+
+// 4. Retrieve the order with the customer_name: "Alice Johnson"
+db.orders.find({ customer_name: "Alice Johnson" });
+
+// 5. Update the order_status of the order with order_id: 2 to "delivered"
+db.orders.updateOne(
+  { order_id: 2 },
+  { $set: { order_status: "delivered" } }
+);
+
+// 6. Retrieve all orders with a total_amount greater than or equal to 15000
+db.orders.find({ total_amount: { $gte: 15000 } });
